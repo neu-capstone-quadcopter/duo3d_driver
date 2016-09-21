@@ -32,6 +32,8 @@ add_definitions(-std=c++11)
 
 add_executable(duo3d_driver src/duo3d_driver.cpp)
 
+add_dependencies(duo3d_driver ${PROJECT_NAME}_gencfg)
+
 target_link_libraries(duo3d_driver 
                       ${CMAKE_CURRENT_SOURCE_DIR}/lib/libDUO.so
                       ${CMAKE_CURRENT_SOURCE_DIR}/lib/libDense3DMT.so
