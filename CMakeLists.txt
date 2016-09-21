@@ -39,3 +39,7 @@ target_link_libraries(duo3d_driver
                       ${CMAKE_CURRENT_SOURCE_DIR}/lib/libDense3DMT.so
                       ${catkin_LIBRARIES}
 )
+
+install(DIRECTORY launch
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+)
