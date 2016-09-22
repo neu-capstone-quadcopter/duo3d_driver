@@ -43,7 +43,9 @@ target_link_libraries(duo3d_driver
 install(TARGETS duo3d_driver
     DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
-
+install(FILES lib/libDUO.so lib/libDense3DMT.so lib/libDense3D.so
+    DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+)
 install(DIRECTORY launch
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
