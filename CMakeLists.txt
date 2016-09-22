@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.4.6)
+cmake_minimum_required(VERSION 2.8.3)
 project(duo3d_driver)
 
 # if CMAKE_BUILD_TYPE is not specified, take 'Release' as default
@@ -38,6 +38,10 @@ target_link_libraries(duo3d_driver
                       ${CMAKE_CURRENT_SOURCE_DIR}/lib/libDUO.so
                       ${CMAKE_CURRENT_SOURCE_DIR}/lib/libDense3DMT.so
                       ${catkin_LIBRARIES}
+)
+
+install(TARGETS duo3d_driver
+    DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
 install(DIRECTORY launch
