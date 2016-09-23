@@ -487,7 +487,7 @@ protected:
 
         if(!Dense3DOpen(&_dense3dInstance))
         {
-            ROS_ERROR("Could not open Dense3D library");
+            ROS_ERROR("Could not open Dense3D library: %d", Dense3DGetErrorCode());
             return false;
         }
         if(!SetDense3DLicense(_dense3dInstance, _dense3d_license.c_str()))
